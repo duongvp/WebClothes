@@ -1,0 +1,15 @@
+﻿@model IEnumerable<WebClothes.ViewModel.ProductViewModel>
+@foreach (var item in Model)
+{
+    <div class="pro1 col-lg-4 col-sm-6 px-2 pb-2" id="pro-@item.pro.Id">
+        <a href="/Product/Detail/@item.pro.Id" onclick=PageDetail(@item.pro.Id)>
+            <div class="box-img">
+                <img class="img img-src" src="@item.pro.Image">
+            </div>
+            <p class="product-name">@item.pro.Name @item.pro.Code</p>
+            <p><span id="price">@item.pro.Price</span>đ</p>
+        </a>
+        <button class="btn-quickview" data-btn="@item.pro.Id">Xem nhanh</button>
+    </div>
+}
+

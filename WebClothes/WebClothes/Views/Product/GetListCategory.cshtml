@@ -1,0 +1,8 @@
+﻿@model IEnumerable<WebClothes.Models.CategoryChild>
+@foreach (var item in Model)
+{
+    <li>
+        <a href="/Product/ListProduct/@item.Id">@item.Name</a>
+    </li>
+}
+

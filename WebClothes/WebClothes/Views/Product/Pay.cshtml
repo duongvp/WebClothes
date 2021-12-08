@@ -1,0 +1,99 @@
+﻿<div class="order">
+    <div class="required bar">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">giỏ hàng</a></li>
+                <li class="breadcrumb-item"><a href="#">giao hàng & thanh toán</a></li>
+                <li class="breadcrumb-item active" aria-current="page">xác nhận</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="receive-infor container">
+    <div class="customer-form row">
+        <form id="custom-form"  method="post" class="customer-info col-lg-6 pe-lg-5">
+            <h4>Thông tin thanh toán</h4>
+            <div class="customer-name">
+                <input type="text"  placeholder="Họ và tên" name="username" id="customer-name-input">
+            </div>
+            <div class="customer-email">
+                <input type="email"  placeholder="Email" name="email" id="customer-Email-input">
+            </div>
+            <div class="customer-contact">
+                <div class="d-flex row-customer">
+                    <input id="customer-contact-address" type="text" name="address" placeholder="Địa chỉ" class="col-sm-6 col-12">
+                    <input id="customer-contact-phone" type="text" name="phone" placeholder="Số điện thoại" class="col-sm-6  col-12">
+                </div>
+            </div>
+            <div class="payment-methods">
+                <h5>Phương thức thanh toán</h5>
+                <div class="pay-home">
+                    <input type="radio" name="pay-money" onchange="paymoney(1)" id="paymoney1"> <label for="paymoney1">Thanh toán tại nhà</label>
+                </div>
+                <div class="pay-visa">
+                    <input type="radio" name="pay-money" onchange="paymoney(2)" id="paymoney2"> <label for="paymoney2">Chuyển khoản qua ngân hàng</label>
+                    <div class="content-visa">
+                        <h6>NGÂN HÀNG VIETCOMBANK - Chi nhánh Thành Công</h6>
+                        <h6>Số tài khoản: 0011004240922</h6><br>
+                        <h6>Chủ tài khoản:NGUYỄN ĐỨC DƯƠNG</h6><br>
+                        <p>Nội dung chuyển khoản quý khách vui lòng điền theo cú pháp: "ID đơn hàng (đã được gửi tới mail) + Họ và tên"</p><br>
+                        <p>
+                            Sau khi giao dịch, bạn chụp ảnh màn hình bill thanh toán và liên hệ bộ phận chăm sóc khách hàng để được xác nhận thành công. Moores sẽ liên hệ lại trong giờ hành chính, tối đa không quá 12 tiếng. Quý khách vui lòng để ý điện
+                            thoại để xác nhận đơn hàng.
+                        </p><br>
+                        <p>Xin chân thành cảm ơn quý khách đã tin tưởng và đặt hàng tại Moores !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-payment">
+                <button type="submit" onclick="PaySuccess()">HOÀN TẤT THANH TOÁN</button>
+            </div>
+        </form>
+        <div class="sideBar col-lg-6 p-lg-5">
+            <div class="order-sections">
+                <table class="product-table">
+                    <tr>
+                        <td class="img-product-table"><img src="img/aolen6.jpg"></td>
+                        <td class="product-name-table">
+                            <p>Áo sơ mi nam Aristino</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fieldset">
+                <input class="field-input-wrapper" id="input-code" type="text"  placeholder="Mã giảm giá">
+                <button onclick="usecode()">Sử dụng</button>
+            </div>
+            <div class="total-line">
+                <div class="provisional">
+                    <div class="right-price-content">
+                        <p><label>Tạm tính</label></p>
+                    </div>
+                    <div class="left-price-content">
+                        <p><span id="provisional-price">500.000</span>đ
+                        <p>
+                    </div>
+                </div>
+                <div class="transport-fee">
+                    <div class="right-price-content">
+                        <p><label>Phí vận chuyển</label></p>
+                    </div>
+                    <div class="left-price-content">
+                        <p><span id="ship">0</span>đ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Final-total-line">
+                <div class="right-price-content">
+                    <p><label>Tổng cộng</label></p>
+                </div>
+                <div class="left-price-content">
+                    <p><span id="total">500.000</span>đ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

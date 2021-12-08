@@ -1,0 +1,307 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Sarabun', sans-serif;
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: #f5f5f5;
+        }
+        
+        .title-logo {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .info-user {
+            border-left: 1px solid #ccc;
+            padding: 13px 0;
+        }
+        
+        .info-user img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+        
+        .category-page ul {
+            padding: 15px 15px;
+        }
+        
+        .category-page li {
+            padding: 10px 0;
+        }
+        
+        .category-page a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.788);
+        }
+        
+        .category-page a:hover {
+            color: #ff6709;
+        }
+        
+        .category-page a span {
+            padding-left: 7px;
+        }
+        
+        .content-admin {
+            height: 600px;
+            background: #eeeeee;
+            padding: 25px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            transition: all 1s linear;
+        }
+        
+        .hide-scroll {
+            overflow-y: hidden;
+        }
+        
+        .detail-content {
+            padding: 0 15px;
+        }
+        
+        .detail-content table {
+            font-size: .91rem;
+        }
+        
+        .detail-content table tr {
+            vertical-align: middle;
+        }
+        
+        .main {
+            position: relative;
+        }
+        
+        .active span,
+        .active i {
+            color: #ff6709;
+        }
+        
+        .add,
+        .btn-delete,
+        .btn-update,
+        .btn-update-info,
+        .btn-detail-order {
+            border: 0 none;
+            color: #fff;
+            background: rgb(61, 159, 250);
+            padding: 3px 10px;
+            border-radius: 3px;
+        }
+        
+        .btn-delete {
+            background: rgb(220, 53, 69);
+        }
+        
+        .btn-detail-order {
+            background: #21be7d;
+        }
+        
+        .btn-update,
+        .btn-update-info {
+            background: rgb(255, 193, 7);
+            color: #1f2d3d;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -100%;
+            display: flex;
+            justify-content: end;
+            transition: all .6s linear;
+        }
+        
+        .showOverLay {
+            right: 0;
+            left: 0;
+        }
+        
+        .black {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #1f2d3d;
+            opacity: 0.2;
+        }
+        
+        .action-inp {
+            background: #fff;
+            z-index: 100;
+            overflow-y: auto;
+            height: 100%;
+            padding-bottom: 30px;
+        }
+        
+        .inp-info p,
+        .btn-radio-status p {
+            margin-bottom: 3px;
+        }
+        
+        .action-inp .title {
+            background: #ff6709;
+            color: #fff;
+            padding: 5px 20px;
+            height: fit-content;
+        }
+        
+        .main-form {
+            padding: 5px 15px;
+        }
+        
+        .start-action,
+        .off-action {
+            color: #fff;
+            background: rgb(2, 161, 2);
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: .89rem;
+        }
+        
+        .off-action {
+            background: rgb(231, 4, 4);
+        }
+        
+        .form-control,
+        .form-select {
+            padding: 3px 10px !important;
+            margin-bottom: 5px;
+        }
+        
+        .td-img-pro img {
+            width: 80px;
+            object-fit: contain;
+        }
+        
+        .td-name-pro {
+            width: 300px;
+        }
+        
+        #show-image-file {
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+            visibility: hidden;
+        }
+        
+        .info-bill-customer {
+            padding: 10px 10px 10px 0px;
+            height: 100%;
+            font-size: 0.915rem;
+        }
+        
+        .form-bill-customer,
+        .info-bill-customer1 {
+            position: relative;
+        }
+        
+        .info-handling,
+        .info-payment-child {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+        }
+        
+        .img-tb-pro img {
+            height: 50px;
+            width: 70px;
+        }
+        
+        .tb-choice-pro {
+            position: absolute;
+            background: #ccc;
+        }
+        
+        .td-food-name {
+            width: 200px;
+        }
+        
+        .number-food-order {
+            width: 30px;
+            -moz-appearance: textfield;
+            outline: none;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        
+        .number-food-order::-webkit-outer-spin-button,
+        .number-food-order::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* .tb-bill-child {
+            height: 300px;
+            overflow-y: auto;
+        } */
+        
+        .tb-bill-child::-webkit-scrollbar {
+            width: 7px;
+        }
+        
+        .tb-bill-child::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tb-bill-child::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: #ccc;
+        }
+        
+        .banner-tb-bill {
+            background: #21be7d;
+            color: #fff;
+            padding-left: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        
+        .code-bill {
+            background: #fff;
+            color: #495057;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        
+        .form-bill-customer table {
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+        
+        .form-bill-customer table td {
+            padding: 5px 10px 0px 10px;
+        }
+        
+        .btn-payment {
+            border: 0;
+            outline: none;
+            background: rgb(44, 161, 44);
+            color: #fff;
+            border-radius: 3px;
+            padding: 0 10px;
+        }
+        
+        .select-choice-pro {
+            font-size: .8rem;
+        }
+        
+        .img-food-choice {
+            width: 30px;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .number-sell {
+            white-space: nowrap;
+        }
+        
+        .price-number {
+            padding-left: 5px;
+        }

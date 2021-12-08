@@ -1,0 +1,156 @@
+﻿@model WebClothes.Models.Product
+<div class="small-part">
+    <div class="container-fluid">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="#">Sơ mi</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sơ mi cộc tay</li>
+            </ol>
+        </nav>
+        <div class="product-detail row d-flex ms-0 pt-2" id="pro-@Model.Id">
+            <div class="small-image-product col-lg-1 col-sm-2 ps-sm-0">
+                @foreach (var item in ViewBag.Listimage as IEnumerable<WebClothes.Models.ListImage>)
+                {
+                    <div class="img-aolen">
+                        <img class="zoom-gallery item-image" src="@item.Image" alt="">
+                    </div>
+                }
+            </div>
+            <div class="main-image-product col-lg-4 col-sm-10 ps-0 pe-sm-0">
+                <img src="@Model.Image" xoriginal="@Model.Image" class="img-src zoom main-image">
+            </div>
+            <div class="product-infor col-lg-7 col-sm-12 ps-lg-4">
+                <h5 class="product-name">@Model.Name @Model.Code</h5>
+                <h6><span id="price">@(Model.Price.HasValue?Model.Price.Value.ToString("N0"):"Câp nhật")</span>đ</h6>
+                <p><b>Trạng thái</b>:@Model.Status</p>
+                <p>Áo sơ mi nam thương hiệu JeansWest trẻ trung,năng động dành cho các bạn nam.</p>
+                <p>Chất liệu:100% cotton</p>
+                <p>Thiết kế dài tay</p>
+                <p>Có một túi bên trái</p>
+                <p>Thiết kế 7 nút trước</p>
+                <p>Họa tiết nhỏ</p>
+                <h6>Chọn size</h6>
+                <div class="product-size">
+                    @foreach (var item in ViewBag.size as IEnumerable<WebClothes.Models.Size>)
+                    {
+                        <div class="size-items-name box-1">
+                            <label for="size-@item.Id" onclick="size(this)">@item.Size1</label>
+                            <input type="radio" name="sizename" value="@item.Size1" id="size-@item.Id">
+                        </div>
+                    }
+                    <a href="/Product/TableSize">Xem bảng mã size</a>
+                </div>
+                <div class="product-number">
+                    <h6>Số lượng</h6>
+                    <button class="btnReduction">-</button>
+                    <input type="number" name="quantity" value="1" min="1" max="10" onkeyup="">
+                    <button class="btnAdd-amount">+</button>
+                    <button class="product-btnbuy" productId="@Model.Id" type="submit">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+        <div class="Product-Description">
+            <h5>Mô tả sản phẩm</h5>
+            <div class="decsMt desc">
+                <p>Áo sơ mi nam chất liệu mềm mịn, có khả năng co dãn tốt, mặc thoáng mát, form ôm tôn lên vóc dáng cơ thể, tạo cảm giác thoải mái khi vận động.Với nhiều gam màu khác nhau tạo sự trẻ trung, năng động,đường may tinh tế, tỉ mỉ, chắc chắn. Kết hợp với quần jean, quần kaki, quần short dùng để đi chơi, đi làm, đi gặp bạn bè, đi du lịch cũng tạo sự đa dạng về gu ăn mặt</p>
+                <p>Bảo quản áo sơ mi:</p>
+                <p>+ Sấy khô thấp, phơi&nbsp;áo ở nhiệt độ thấp.</p>
+                <p>+ Không sử dụng chất tẩy mạnh lên áo.</p>
+                <p>+ Lần đầu giặt nên ngâm sản phẩm với nước ấm qua đêm trước khi giặt để giữ được màu cho sản phẩm.</p>
+                <p>+ Để giữ được màu lâu, khách nên phơi mặt trái của áo.</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+        <div class="hot-products">
+            <h4>Sản phẩm  liên quan</h4>
+            <div class="product-list">
+                @foreach (var item in ViewBag.relatedPro as IEnumerable<WebClothes.ViewModel.ProductViewModel>)
+                {
+                    <div>
+                        <div class="img-pro-1">
+                            <img src="@item.pro.Image">
+                        </div>
+                        <div class="special-price">
+                            <p>Giá đặc biệt</p>
+                        </div>
+                        <p class="product-name">@item.pro.Name @item.pro.Code</p>
+                        <p><span>@item.pro.Price</span>đ</p>
+                        <button class="btnbuy">Mua ngay</button>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="hot-products viewed-products ">
+            <h4>Sản phẩm  đã xem</h4>
+            <div class="product-list">
+                <div>
+                    <div class="img-pro-1">
+                        <img src="img/aolen1.jpg">
+                    </div>
+                    <div class="special-price">
+                        <p>Giá đặc biệt</p>
+                    </div>
+                    <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+                    <p><span>5.200.000đ</span></p>
+                    <button class="btnbuy">Mua ngay</button>
+                </div>
+                <div>
+                    <div class="img-pro-1">
+                        <img src="img/aolen2.jpg">
+                    </div>
+                    <div class="special-price">
+                        <p>Giá đặc biệt</p>
+                    </div>
+                    <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+                    <p><span>5.200.000đ</span></p>
+                    <button class="btnbuy">Mua ngay</button>
+                </div>
+                <div>
+                    <div class="img-pro-1">
+                        <img src="img/aolen3.jpg">
+                    </div>
+                    <div class="special-price">
+                        <p>Giá đặc biệt</p>
+                    </div>
+                    <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+                    <p><span>5.200.000đ</span></p>
+                    <button class="btnbuy">Mua ngay</button>
+                </div>
+                <div>
+                    <div class="img-pro-1">
+                        <img src="img/aolen4.jpg">
+                    </div>
+                    <div class="special-price">
+                        <p>Giá đặc biệt</p>
+                    </div>
+                    <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+                    <p><span>5.200.000đ</span></p>
+                    <button class="btnbuy">Mua ngay</button>
+                </div>
+                <div>
+                    <div class="img-pro-1">
+                        <img src="img/aolen5.jpg">
+                    </div>
+                    <div class="special-price">
+                        <p>Giá đặc biệt</p>
+                    </div>
+                    <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+                    <p><span>5.200.000đ</span></p>
+                    <button class="btnbuy">Mua ngay</button>
+                </div>
+                <div>
+                    <div class="img-pro-1">
+                        <img src="img/aolen6.jpg">
+                    </div>
+                    <div class="special-price">
+                        <p>Giá đặc biệt</p>
+                    </div>
+                    <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+                    <p><span>5.200.000đ</span></p>
+                    <button class="btnbuy">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

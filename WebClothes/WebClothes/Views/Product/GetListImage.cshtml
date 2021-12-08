@@ -1,0 +1,7 @@
+﻿@model IEnumerable<WebClothes.Models.ListImage>
+@foreach (var item in Model)
+{
+    <div class="img-aolen-child">
+        <img class="zoom-gallery item-image" onclick="ChangePicture(this)" src="@item.Image" alt="">
+    </div>
+}

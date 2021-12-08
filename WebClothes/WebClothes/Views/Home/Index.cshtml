@@ -1,0 +1,150 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="banner-slide">
+    <div class="block">
+        <img src="/Content/img/slide-01.jpg">
+        <div class="block-child-01">
+            <span class="block1-name animate__animated animate__rollIn animate__delay-0s">Men New-Season </span>
+            <span class="block1-info animate__animated animate__lightSpeedInRight animate__delay-1s">JACKETS & COATS</span>
+            <a href="sanpham-ds.html"><button class="btn-shop-now animate__animated animate__zoomInLeft animate__delay-2s">SHOP NOW</button></a>
+        </div>
+    </div>
+    <div class="block">
+        <img src="/Content/img/son2.jpg">
+    </div>
+    <div class="block">
+        <img src="/Content/img/son4.jpg">
+    </div>
+    <div class="block">
+        <img src="/Content/img/son1.jpg">
+    </div>
+</div>
+<div class="product-category">
+    <div class="container-fluid">
+        <div class="row mb-1 my-parent ">
+            <div class="col-12 col-md-6 col-xl-6 p-1 my-child " data-aos="fade-right" data-aos-duration="1300">
+                <a href="/Product/ListProduct/100">
+                    <img src="/Content/img/somi.jpg">
+                    <div class="detail">
+                        <p>SƠ MI</p>
+                        <P>XEM CHI TIẾT</P>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-6 p-1 my-child" data-aos="fade-left" data-aos-duration="1300">
+                <a href="/Product/ListProduct/101">
+                    <img src="/Content/img/quanau.jpg">
+                    <div class="detail">
+                        <p>QUẦN ÂU</p>
+                        <P>XEM CHI TIẾT</P>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row my-parent">
+            <div class="col-12 col-md-4 col-xl-4 p-1 my-child" data-aos="fade-up-right" data-aos-duration="1700">
+                <a href="/Product/ListProduct/102">
+                    <img src="/Content/img/aoPolo.jpg">
+                    <div class="detail">
+                        <p>ÁO PHÔNG POLO</p>
+                        <P>XEM CHI TIẾT</P>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4 col-xl-4 p-1 my-child" data-aos="fade-up" data-aos-duration="1700">
+                <a href="/Product/ListProduct/105">
+                    <img src="/Content/img/aokhoac.jpg">
+                    <div class="detail">
+                        <p>ÁO KHOÁC</p>
+                        <P>XEM CHI TIẾT</P>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-4 col-xl-4 p-1 my-child" data-aos="fade-up-left" data-aos-duration="1700">
+                <a href="/Product/ListProduct/106">
+                    <img src="/Content/img/phukien.jpg">
+                    <div class="detail">
+                        <p>PHỤ KIỆN</p>
+                        <P>XEM CHI TIẾT</P>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product">
+    <h3 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Sản phẩm nội bật</h3>
+    <div class="product-list">
+        @foreach (var item in ViewBag.List as IEnumerable<WebClothes.Models.Product>)
+        {
+            <div>
+                <div class="img-pro-1">
+                    <img src="@item.Image">
+                </div>
+                <div class="special-price">
+                    <p>Giá đặc biệt</p>
+                </div>
+                <p class="product-name">@item.Name</p>
+                <p><span>@(item.Price.HasValue?item.Price.Value.ToString("N0"):"Câp nhật")đ</span></p>
+                <a href="/Product/Detail/@item.Id"><button class="btnbuy">Mua ngay</button></a>
+            </div>
+        }
+@*
+        <div>
+            <div class="img-pro-1">
+                <img src="img/aolen2.jpg">
+            </div>
+            <div class="special-price">
+                <p>Giá đặc biệt</p>
+            </div>
+            <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+            <p><span>5.200.000đ</span></p>
+            <button class="btnbuy">Mua ngay</button>
+        </div>
+        <div>
+            <div class="img-pro-1">
+                <img src="img/aolen3.jpg">
+            </div>
+            <div class="special-price">
+                <p>Giá đặc biệt</p>
+            </div>
+            <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+            <p><span>5.200.000đ</span></p>
+            <button class="btnbuy">Mua ngay</button>
+        </div>
+        <div>
+            <div class="img-pro-1">
+                <img src="img/aolen4.jpg">
+            </div>
+            <div class="special-price">
+                <p>Giá đặc biệt</p>
+            </div>
+            <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+            <p><span>5.200.000đ</span></p>
+            <button class="btnbuy">Mua ngay</button>
+        </div>
+        <div>
+            <div class="img-pro-1">
+                <img src="img/aolen5.jpg">
+            </div>
+            <div class="special-price">
+                <p>Giá đặc biệt</p>
+            </div>
+            <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+            <p><span>5.200.000đ</span></p>
+            <button class="btnbuy">Mua ngay</button>
+        </div>
+        <div>
+            <div class="img-pro-1">
+                <img src="img/aolen6.jpg">
+            </div>
+            <div class="special-price">
+                <p>Giá đặc biệt</p>
+            </div>
+            <p class="product-name">ÁO LEN ĐAN SỢI PHA MÀU</p>
+            <p><span>5.200.000đ</span></p>
+            <button class="btnbuy">Mua ngay</button>
+        </div>*@
+    </div>
+</div>

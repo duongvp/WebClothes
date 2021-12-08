@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="page.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+        <div class="nav1">
+            <div class="imgLogo">
+                <img src="img/logo.png" alt="Moore's">
+            </div>
+            <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p class="add-p">104 Quán Thánh,Ba Đình,Hà Nội. Hotline 0374.459.780</p>
+                <div class="search">
+                    <input type="text" name="" placeholder="Từ khóa tìm kiếm">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="dathang.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="icon-cart-number">0</span>
+                </a>
+            </div>
+        </div>
+        <div class="navBar">
+            <label for="nav-input-mobile" class="navBtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" name="" id="nav-input-mobile">
+            <label for="nav-input-mobile" class="nav-overlay">
+            </label>
+            <div class="navMobile">
+                <label for="nav-input-mobile">
+                <i class="fas fa-times"></i>
+                </label>
+                <ul>
+                    <li>
+                        <a href="trangchu.html">Trang chủ</a>
+                    </li>
+                    <li class="shirt">
+                        <a href="sanpham-ds.html">Sơ mi</a>
+                        <button class="btn-show-item-category"><i class="fas fa-chevron-right"></i></button>
+                        <ul class="shirt-category">
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Quần âu</a>
+                    </li>
+                    <li>
+                        <a href="#">Áo Polo</a>
+                    </li>
+                    <li>
+                        <a href="#">Áo nỉ</a>
+                    </li>
+                    <li>
+                        <a href="#">Denin</a>
+                    </li>
+                    <li>
+                        <a href="#">Áo khoác</a>
+                    </li>
+                    <li>
+                        <a href="#">Phụ kiện</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navBar1">
+                <ul>
+                    <li>
+                        <a href="trangchu.html">Trang chủ</a>
+                    </li>
+                    <li class="shirt menu-parent">
+                        <a href="sanpham-ds.html">Sơ mi</a>
+                        <ul class="shirt-items-category items-category">
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Quần âu</a>
+                    </li>
+                    <li>
+                        <a href="#">Áo Polo</a>
+                    </li>
+                    <li>
+                        <a href="#">Áo nỉ</a>
+                    </li>
+                    <li>
+                        <a href="#">Denin</a>
+                    </li>
+                    <li class="Overcoat menu-parent">
+                        <a href="#">Áo khoác</a>
+                        <ul class="Overcoat-category items-category">
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accessories menu-parent">
+                        <a href="#">Phụ kiện</a>
+                        <ul class="accessories-category items-category">
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                            <li>
+                                <a href="#">Áo camp shirt</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hightlight">
+                <p><a href="#">Mới tuần này</a></p>
+                <p><a href="khuyenmai.html">Khuyến mãi</a></p>
+            </div>
+        </div>
+    </header>
+	<div class="order">
+		<div class="required bar">
+			<div class="required bar">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">giỏ hàng</a></li>
+                <li class="breadcrumb-item active" aria-current="page">giao hàng & thanh toán</li>
+                <li class="breadcrumb-item active" aria-current="page">xác nhận</li>
+              </ol>
+            </nav>
+        </div>
+		</div>
+	</div>
+	<div class="layout-page">
+		<div class="cart-page">
+			<h4>GIỎ HÀNG CỦA BẠN</h4>
+			<p class="product-number-title">Hiện đang có <span id="product-number">1</span> sản phẩm</p>
+		</div>
+		<div class="cart-form-page">
+			<div>
+				<div class="header-cart">
+					<h6>Số lượng</h6>
+					<h6>Số tiền</h6>
+				</div>
+				<div class="container-content-cart">
+					<div class="content-cart">
+						<div class="img-item">
+							<img src="img/aolen6.jpg">
+						</div>
+						<div class="name-item">
+							<p>Áo len đan bền sợi pha màu</p>				
+							<p><span>Cỡ</span>:<span>XL</span></p> 
+							<button class="btn-remove">Remove</button>
+						</div>
+						<div class="amount-item ">
+							<input type="number" name="" value="1" min="1"> 
+						</div>
+						<div class="price-item">
+							<p><span>500.000</span>đ</p>
+						</div>
+					   </div>
+					</div>
+			</div>
+			<div class="bottom-cart">
+				<h6>Tổng tiền</h6>
+				<span id="total-price">500.000</span><label>đ</label>
+			</div>
+			<div class="cart-button">
+				<a href="thanhtoan.html">
+					<button>Thanh toán ngay</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+        <div class="end-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="footer-email col-lg-3 col-sm-12 pe-lg-3 ps-lg-0 pb-lg-0 pb-4">
+                        <h6>ĐĂNG KÝ NHẬN BẢNG TIN</h6>
+                        <P>Nhận tin tức và khuyến mãi mới nhất sẽ được gửi đến hộp thư của bạn </P>
+                        <form class="btn-email">
+                            <input type="email" name="" placeholder="Địa chỉ email">
+                            <button>Đăng ký</button>
+                        </form>
+                    </div>
+                    <div class="footer-policy col-lg-3 col-sm-12 ps-lg-3 pb-lg-0 pb-4">
+                        <h6>CHÍNH SÁCH BẢNG TIN</h6>
+                        <a href="">Hướng dẫn bán hàng</a>
+                        <a href="">Chính sách giao nhận</a>
+                        <a href="">Chính sách đổi trả</a>
+                        <a href="">Bảo mật thông tin khách hàng</a>
+                    </div>
+                    <div class="footer-info col-lg-3 col-sm-12  pe-lg-0 px-lg-3 pb-lg-0 pb-4">
+                        <h4>MOORE'S</h4>
+                        <P><i class="fas fa-map-marker-alt"></i><span>Tòa nhà 34T,Hoàng Đạo Thúy,Hà Nội</span></P>
+                        <p><i class="fas fa-phone-alt"></i><span>0374.459.780</span></p>
+                        <p><i class="fas fa-envelope"></i><span>duongnguyen19122000@gmail.com</span></p>
+                        <p><i class="fas fa-globe"></i><span>www.Moores.com</span></p>
+                    </div>
+                    <div class="footer-contact col-lg-3  col-sm-12 pe-0 ps-lg-3 pb-lg-0 pb-4">
+                        <div class="contact-icons">
+                            <p>Moores trên</p>
+                            <a href=""><i class="fab fa-facebook-square"></i></a>
+                            <a href=""><i class="fab fa-youtube-square"></i></a>
+                            <a href=""><i class="fab fa-twitter-square"></i></a>
+                            <a href=""><i class="fab fa-instagram-square"></i></a>
+                        </div>
+                        <div class="phonenumber">
+                            <img src="img/icon-phone.png">
+                            <div>
+                                <p>Hotline tư vấn bán hàng</p>
+                                <p style="font-weight: 600; text-align: center; font-size: 1.2em;">0374.459.780</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-up">
+            <img src="img/up-arrow.png">
+        </div>
+    </footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/dathang.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+img
+{
+  width: 100%;
+  height:500px;
+
+}
+.banner .slick-dots li
+{
+	display: none;
+}
+.banner
+{
+	position: relative;
+}
+.banner .slick-next 
+{
+	position: absolute;
+	background:url('../img/sleft.png');
+	width: 42px;
+	height: 42px;
+    top: 250px;
+    border:0;
+    font-size: 0;
+    transform: rotate(180deg);
+    right: 5%;
+    z-index: 10;
+}
+.banner .slick-prev 
+{
+	position: absolute;
+	background:url('../img/sleft.png');
+	width: 42px;
+	height: 42px;
+    top: 250px;
+    border:0;
+    font-size: 0;
+    left: 5%;
+    z-index: 10;
+}

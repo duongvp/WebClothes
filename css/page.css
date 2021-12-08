@@ -1,0 +1,827 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: white;
+}
+
+.nav1 {
+    width: 100%;
+    height: 4em;
+    border: 1px solid #e0e0e0;
+}
+
+.nav1 .imgLogo {
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    float: left;
+}
+
+.nav1 img {
+    width: 12em;
+    height: 3em;
+    object-fit: cover;
+    margin: 1% 20% 1% 25%;
+}
+
+.info {
+    display: flex;
+    margin: 1.5% 0;
+    width: 60%;
+}
+
+.info .fa-map-marker-alt {
+    margin-right: 0.5em;
+    padding-top: 0.2em;
+}
+
+.info p {
+    margin-right: 2.3em;
+    padding-top: 0.2em;
+}
+
+.info .search {
+    border: 1px solid #e0e0e0;
+    padding: 0.2em 0.7em;
+    border-radius: 15px;
+    margin-right: 1em;
+    background: #e0e0e0;
+}
+
+.info .search input {
+    border: none;
+    outline: none;
+    background: #e0e0e0;
+}
+
+.info .search button {
+    border: none;
+    outline: none;
+    background: #e0e0e0;
+}
+
+.info .fa-shopping-cart {
+    padding-top: 0.2em;
+}
+
+.navBar {
+    width: 100%;
+    height: 2em;
+    position: relative;
+    margin-top: 0.5em;
+}
+
+.navBar1 {
+    left: 10%;
+    position: absolute;
+    width: 63%;
+}
+
+.navBar1 ul {
+    display: flex;
+    list-style: none;
+}
+
+.navBar1 ul li {
+    padding-left: 1em;
+}
+
+.navBar1 ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.hightlight {
+    position: absolute;
+    right: 0;
+    width: 27%;
+    display: flex;
+    text-align: center;
+}
+
+.hightlight h5 {
+    padding: 0 1em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.hightlight h5:last-child:before {
+    content: "|";
+    position: absolute;
+    left: 0;
+}
+
+.banner-slide {
+    width: 100%;
+    height: 50em;
+    position: relative;
+}
+
+.banner-slide img {
+    width: 100%;
+    height: 50em;
+    object-fit: cover;
+}
+
+.banner-slide .slick-dots li {
+    display: none;
+}
+
+.banner-slide .slick-next {
+    position: absolute;
+    background: url('../img/next.png');
+    width: 42px;
+    height: 42px;
+    top: 50%;
+    font-size: 0;
+    border: 0;
+    right: 5%;
+    z-index: 10;
+    background-size: contain;
+    outline: none;
+}
+
+.banner-slide .slick-prev {
+    position: absolute;
+    background: url('../img/next.png');
+    width: 42px;
+    height: 42px;
+    top: 50%;
+    font-size: 0;
+    border: 0;
+    left: 5%;
+    z-index: 10;
+    background-size: contain;
+    outline: none;
+    transform: rotate(180deg);
+}
+
+.container {
+    margin: 3% 10%;
+    height: 56em;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    height: 50%;
+    margin: 1%;
+}
+
+.row .col {
+    width: 50%;
+    height: 100%;
+    margin: 0.6%;
+    position: relative;
+    text-align: center;
+}
+
+.row .col img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.row .col .detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.row .col .detail p:first-child {
+    font-size: 1.8em;
+    padding-bottom: 0.2em;
+}
+
+.row:last-child .col .detail p:first-child {
+    font-size: 1.4em;
+}
+
+.product {
+    margin: 3.5% 10%;
+    font-weight: 300;
+    text-align: center;
+}
+
+.product h3 {
+    font-size: 2em;
+}
+
+.product-list {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    margin-top: 2%;
+    position: relative;
+    text-align: center;
+}
+
+.product-list img {
+    width: 96%;
+    height: 20em;
+    object-fit: cover;
+    margin-left: 4%;
+    padding-bottom: 0.8em;
+}
+
+.product-list .slick-dots li {
+    display: none;
+}
+
+.product-list .slick-next {
+    position: absolute;
+    background: url("../img/iconPrev.png");
+    width: 32px;
+    height: 32px;
+    top: 35%;
+    font-size: 0;
+    border: 0;
+    right: 0;
+    z-index: 10;
+    background-size: contain;
+    outline: none;
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
+}
+
+.product-list .slick-prev {
+    position: absolute;
+    background: url("../img/iconPrev.png");
+    width: 32px;
+    height: 32px;
+    top: 35%;
+    font-size: 0;
+    border: 0;
+    left: 1%;
+    z-index: 10;
+    background-size: contain;
+    outline: none;
+    background-repeat: no-repeat;
+}
+
+.product-list .special-price {
+    margin: 0 30% 4% 30%;
+    font-weight: 400;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    ;
+}
+
+.product-list .product-name {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #616161;
+    font-weight: 500;
+    margin-bottom: 1%;
+}
+
+.product-list span {
+    color: #616161;
+    font-weight: 500;
+}
+
+.product-list .btnbuy {
+    margin-top: 5%;
+    padding: 3% 9%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 0;
+    outline: none;
+}
+
+footer {
+    width: 100%;
+    height: 15em;
+    position: relative;
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    background: #bdbdbd;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+}
+
+.end-bar {
+    display: flex;
+    position: absolute;
+    left: 9%;
+    top: 18%;
+    right: 9%;
+}
+
+.footer-email {
+    width: 26%;
+    padding-right: 3%;
+    position: relative;
+}
+
+.footer-email:after {
+    content: "";
+    position: absolute;
+    background: #bdbdbd;
+    width: 1px;
+    top: 10%;
+    bottom: 10%;
+    right: 0;
+}
+
+.footer-email p {
+    margin: 5% 0;
+}
+
+.btn-email {
+    border: 1px solid #bdbdbd;
+    width: 80%;
+    padding: 2% 5%;
+}
+
+.btn-email input {
+    border: 0;
+    outline: none;
+    width: 58%;
+    padding-right: 5%;
+}
+
+.btn-email button {
+    border: 0;
+    background: white;
+    padding-left: 5%;
+    position: relative;
+    outline: none;
+}
+
+.btn-email button:before {
+    content: "|";
+    position: absolute;
+    left: 0;
+}
+
+.footer-policy {
+    padding-left: 3%;
+    width: 20%;
+    padding-right: 3%;
+    position: relative;
+}
+
+.footer-policy:after {
+    content: "";
+    position: absolute;
+    background: #bdbdbd;
+    width: 1px;
+    top: 10%;
+    bottom: 10%;
+    right: 0;
+}
+
+.footer-policy a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top: 5%;
+}
+
+.footer-policy a:hover {
+    color: #757575;
+}
+
+.footer-info {
+    width: 30%;
+    padding-left: 3%;
+    padding-right: 3%;
+    position: relative;
+}
+
+.footer-info:after {
+    content: "";
+    position: absolute;
+    background: #bdbdbd;
+    width: 1px;
+    top: 10%;
+    bottom: 10%;
+    right: 0;
+}
+
+.footer-info p {
+    margin-top: 5%;
+}
+
+.footer-info p i {
+    margin-right: 3%;
+}
+
+.footer-contact {
+    width: 24%;
+    padding-left: 3%;
+}
+
+.contact-icons {
+    display: flex;
+}
+
+.contact-icons a {
+    padding-left: 5%;
+}
+
+.contact-icons a i {
+    font-size: 1.5em;
+    color: #757575;
+}
+
+.footer-contact .phonenumber {
+    margin-top: 5%;
+    display: flex;
+    border: 1px solid #bdbdbd;
+    padding: 3%;
+}
+
+.footer-contact .phonenumber img {
+    width: 30px;
+    height: 30px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.icon-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 0;
+    z-index: 1;
+}
+
+.icon-up img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.icon-up img:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* css page sp-ds*/
+
+.main {
+    margin: 0 10%;
+}
+
+.banner-somi {
+    width: 100%;
+    height: 20em;
+}
+
+.banner-somi img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-guide {
+    width: 100%;
+    height: 2em;
+    background: #eeeeee;
+}
+
+.intro-somi {
+    padding: 2% 0;
+}
+
+.combobox {
+    display: flex;
+    margin: 2% 0;
+}
+
+.combobox h4 {
+    padding-right: 2%;
+}
+
+.combobox select {
+    margin-right: 2%;
+    padding: 0.2%;
+    outline: none;
+}
+
+.pro-list {
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+}
+
+.pro1 {
+    width: 24.25%;
+    height: 23em;
+    margin-left: 1%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pro1:hover .btnAdd {
+    display: block;
+    transform: translateY(-6.8em);
+    opacity: 1;
+}
+
+.pro1:first-child {
+    margin-left: 0;
+}
+
+.pro1 a {
+    text-decoration: none;
+}
+
+.pro1 img {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+}
+
+.pro1 p {
+    text-align: center;
+    padding-top: 2%;
+    color: #757575;
+}
+
+.pro1 .btnAdd {
+    width: 100%;
+    padding: 5% 0;
+    transform: translateY(-5em);
+    opacity: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 0;
+    outline: none;
+    transition: transform ease 0.7s;
+}
+
+.btn-View-More {
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.btn-View-More button {
+    padding: 1% 3%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 0;
+    outline: none;
+}
+
+.txtsomi {
+    margin: 3% 0;
+}
+
+.txtsomi p {
+    padding: 2% 0;
+}
+
+
+/* css sp-ct*/
+
+.small-part {
+    margin: 7em 10% 0 10%;
+    width: 80%;
+}
+
+.product-detail {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    width: 100%;
+    display: flex;
+    height: 27em;
+}
+
+.small-image-product {
+    width: 7%;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 0.5%;
+}
+
+.small-image-product .img-aolen {
+    width: 100%;
+    height: 19%;
+    object-fit: cover;
+    margin-bottom: 7%;
+}
+
+.small-image-product .img-aolen:last-child {
+    margin: 0;
+}
+
+.small-image-product .img-aolen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-image-product {
+    width: 30%;
+    height: 100%;
+    margin-right: 3%;
+}
+
+.main-image-product img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-infor {
+    width: 52%;
+}
+
+.product-infor h3 {
+    padding: 0.5em 0;
+}
+
+.product-infor .color {
+    width: 100%;
+    height: 7%;
+    display: flex;
+}
+
+.product-infor .color a {
+    width: 3%;
+    height: 100%;
+    padding-right: 2%;
+}
+
+.product-infor .color a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-size {
+    width: 100%;
+    padding-top: 2%;
+    height: 10%;
+}
+
+.product-size a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #bdbdbd;
+    padding: 0.2em;
+    margin-left: 0.5em;
+}
+
+.product-size a:hover {
+    border: 1px solid black;
+}
+
+.product-size a:last-child {
+    border: 0 !important;
+    font-weight: bold;
+}
+
+.product-number {
+    display: flex;
+}
+
+.product-number h4 {
+    padding-right: 6%;
+    padding-top: 1%;
+}
+
+.product-number input {
+    width: 5%;
+    padding: 1% 2%;
+    border: 1px solid #bdbdbd;
+    text-align: center;
+    outline: none;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+.product-number input::-webkit-outer-spin-button,
+.product-number input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+.product-number input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.product-number .btnReduction,
+.product-number .btnAdd {
+    padding: 1% 2%;
+    border: 1px solid #bdbdbd;
+    outline: none;
+    background: white;
+}
+
+.product-btnbuy {
+    margin-left: 5%;
+    padding: 1% 5%;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    outline: none;
+    border: 0;
+}
+
+.Product-Description {
+    width: 100%;
+    padding-bottom: 3%;
+}
+
+.Product-Description .decsMt {
+    background: #eeeeee;
+    margin-top: 3px;
+    padding: 1% 1%;
+    position: relative;
+}
+
+.Product-Description .decsMt:before {
+    position: absolute;
+    content: "";
+    width: 12%;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: black;
+}
+
+.hot-products {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.hot-products:before {
+    content: "";
+    width: 37%;
+    position: absolute;
+    height: 2px;
+    background: #bdbdbd;
+    left: 0;
+    top: 4%;
+    z-index: -1;
+}
+
+.hot-products:after {
+    content: "";
+    width: 37%;
+    position: absolute;
+    height: 2px;
+    background: #bdbdbd;
+    right: 0;
+    top: 4%;
+    z-index: -1;
+}
+
+.hot-products h3 {
+    font-size: 2rem;
+}
+
+.hot-products .product-list {
+    padding-right: 1%;
+    margin-top: 3% !important;
+}
+
+.hot-products .product-list .slick-next {
+    display: none !important;
+}
+
+.hot-products .product-list .slick-prev {
+    display: none !important;
+}
+
+.viewed-products {
+    margin: 5% 0;
+}
+
+
+/* zoom plugin*/
